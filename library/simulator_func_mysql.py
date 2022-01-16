@@ -89,7 +89,7 @@ class simulator_func_mysql:
         self.simul_end_date = self.today
         self.start_min = "0900"
 
-        # 아래 3개는 분별시뮬레이션 옵션
+        #!@ 아래 3개는 분별시뮬레이션 옵션 / 아래 두 변수 시뮬레이터에 복붙해서 변경후 사용
         # (use_min, only_nine_buy 변수만 각각의 알고리즘에 붙여 넣기 해서 사용)
         # 분별 시뮬레이션을 사용하고 싶을 경우 아래 옵션을 True로 변경하여 사용
         self.use_min = False
