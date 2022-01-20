@@ -1,5 +1,5 @@
 @Echo off
-@Echo collector Start
+@Echo trader Start
 set x=0
 call "C:\ProgramData\Anaconda3\Scripts\activate.bat" C:\ProgramData\Anaconda3
 @taskkill /f /im python.exe 2> NUL
@@ -18,9 +18,8 @@ goto repeat
 
 :1
 set x=0
-set max=5000
+set max=700
 
-::start python "%~dp0/../collector_v3.py"
-start python "C:\Users\jun12\PycharmProjects\AutoTrading_2022\collector_v3.py"
+start python "C:\Users\jun12\Documents\auto_trading_2022\"
 timeout 5 > NUL
 goto repeat

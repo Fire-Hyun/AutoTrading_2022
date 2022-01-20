@@ -42,8 +42,8 @@ logger.addHandler(stream_handler)
 logger.addHandler(file_handler)
 
 
-# logger.debug('debug 모드!')
-# logger.info('info 모드!')
-# logger.warning('warning 모드!')
-# logger.error('error 모드!')
-# logger.critical('critical 모드!')
+#logger.debug('debug 모드!')
+#logger.info('info 모드!')
+#logger.warning('warning 모드!')
+#logger.error('error 모드!')
+#logger.critical('critical 모드!')

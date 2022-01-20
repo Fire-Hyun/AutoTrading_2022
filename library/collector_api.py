@@ -2,11 +2,13 @@ from collections import OrderedDict
 
 from sqlalchemy import Integer, Text, String
 
+
 ver = "#version 1.5.0"
 print(f"collector_api Version: {ver}")
 
 import numpy
 import pathlib
+from kind_crawling import KINDCrawler
 from library.open_api import *
 import os
 import time
@@ -25,7 +27,7 @@ class collector_api():
         self.open_api = open_api()
         self.engine_JB = self.open_api.engine_JB
         self.variable_setting()
-        # self.kind = KINDCrawler()
+        self.kind = KINDCrawler()
 
     def variable_setting(self):
         self.open_api.py_gubun = "collector"
@@ -82,7 +84,7 @@ class collector_api():
         if rows[0][8] != self.open_api.today:
             self.min_crawler_check()
 
-        # self.kind.craw()
+        self.kind.craw()
 
         logger.debug("collecting 작업을 모두 정상적으로 마쳤습니다.")
 

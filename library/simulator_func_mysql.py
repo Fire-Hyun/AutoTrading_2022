@@ -1,17 +1,11 @@
+from library.logging_pack import *
 ver = "#version 1.3.10"
 print(f"simulator_func_mysql Version: {ver}")
-import sys
-is_64bits = sys.maxsize > 2**32
-if is_64bits:
-    print('64bit 환경입니다.')
-else:
-    print('32bit 환경입니다.')
 
 from sqlalchemy import event
 
 import pymysql.cursors
 
-from library.logging_pack import *
 from library import cf
 from pandas import DataFrame
 import re
